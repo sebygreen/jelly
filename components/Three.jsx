@@ -53,7 +53,7 @@ export default function Three() {
                     near: 0.1,
                     far: 100,
                     position: [0, -3, 2],
-                    zoom: 4,
+                    zoom: 3.5,
                 }}
             >
                 <ambientLight color={0xffffff} intensity={0.5} />

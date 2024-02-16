@@ -1,0 +1,15 @@
+.active {
+    position: relative;
+}
+
+.active:before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--frosty-foreground);
+    border-radius: 50px;
+}

@@ -4,6 +4,6 @@
 
 .wrapper {
     max-width: 980px;
-    padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large) var(--spacing-large);
+    padding: calc(var(--header-height) + var(--spacing-large) / 2) var(--spacing-large) var(--spacing-large) var(--spacing-large);
     margin: 0 auto;
 }

@@ -9,7 +9,7 @@
 }
 
 .header > div {
-    padding: calc(var(--spacing-large) / 2);
+    padding: calc(var(--spacing-large) / 2) calc(var(--spacing-large) / 2) calc(var(--spacing-large) / 2) calc(var(--spacing-large) / 2 + 10px);
     border-radius: 50px;
     background-color: var(--frosty-black);
     backdrop-filter: blur(10px);
@@ -22,4 +22,10 @@
 .header nav {
     display: flex;
     gap: 10px;
+}
+
+.header svg {
+    display: block;
+    width: auto;
+    height: 40px;
 }

@@ -1,5 +1,6 @@
 import Button from "@/components/Button";
 import styles from "@/style/Contact.module.css";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function Contact() {
     async function handleSubmit() {
@@ -58,7 +59,7 @@ export default function Contact() {
                     id="message"
                     placeholder="Type here..."
                 ></textarea>
-                <Button type="submit" text="Submit" />
+                <Button type="submit" text="Submit" icon={<ArrowRightIcon />} />
             </div>
         </form>
     );
