@@ -1,0 +1,37 @@
+.container h1, .container h2 {
+    margin-bottom: 10px;
+}
+
+.wrapper {
+    max-width: 980px;
+    padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large) var(--spacing-large);
+    margin: 0 auto;
+}
+
+.design {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.grid article {
+    padding: 20px;
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+.grid article figure {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    max-width: 240px;
+    background-color: rgba(0,0,0,.1);
+}
+
+.grid article figure img {
+    object-fit: contain;
+}

@@ -1,0 +1,25 @@
+.header {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding: calc(var(--spacing-large) / 2) calc(var(--spacing-large) / 2) 0 calc(var(--spacing-large) / 2);
+    max-width: 980px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header > div {
+    padding: calc(var(--spacing-large) / 2);
+    border-radius: 50px;
+    background-color: var(--frosty-black);
+    backdrop-filter: blur(10px);
+    display: flex;
+    gap: var(--spacing-large);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav {
+    display: flex;
+    gap: 10px;
+}

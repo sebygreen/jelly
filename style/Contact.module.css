@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.meta input, .meta select, .message textarea, .meta {
+    width: 100%;
+}
+
+.meta input, .meta select, .message textarea {
+    padding: 10px 15px;
+    outline: unset;
+    border: unset;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 5px;
+}
+
+.meta > div:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.message {
+    flex: 1 0 320px;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+.message textarea {
+    height: 200px;
+    margin-bottom: 10px;
+    resize: none;
+}
+
+.message button {
+    width: fit-content;
+    margin-left: auto;
+}
+
+@media (min-width: 480px) {
+    .meta {
+        max-width: 320px;
+    }
+}
+
+@media (min-width: 700px) {
+    .message textarea {
+        height: unset;
+    }
+}

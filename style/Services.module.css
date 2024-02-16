@@ -1,0 +1,10 @@
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+}
+
+.wrapper h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-small);
+}

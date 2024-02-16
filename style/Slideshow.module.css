@@ -1,0 +1,74 @@
+.container {
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.cards article {
+    position: absolute;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    transition: transform .4s ease, opacity .4s ease;
+    cursor: pointer;
+    background-color: crimson;
+    border-radius: 10px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.cards article.p4 {
+    transform: translateX(-80%) scale(0.2);
+    opacity: 0;
+}
+.cards article.p3 {
+    transform: translateX(-60%) scale(0.4);
+    opacity: 0;
+}
+.cards article.p2 {
+    transform: translateX(-40%) scale(0.6);
+    opacity: 0.4;
+}
+.cards article.p1 {
+    transform: translateX(-20%) scale(0.8);
+    opacity: 0.6;
+}
+
+.cards article.current {
+    transform: translateX(0) scale(1);
+    z-index: 1;
+    position: relative;
+}
+
+.cards article.n1 {
+    transform: translateX(20%) scale(0.8);
+    opacity: 0.6;
+}
+.cards article.n2 {
+    transform: translateX(40%) scale(0.6);
+    opacity: 0.4;
+}
+.cards article.n3 {
+    transform: translateX(60%) scale(0.4);
+    opacity: 0;
+}
+.cards article.n4 {
+    transform: translateX(80%) scale(0.2);
+    opacity: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}

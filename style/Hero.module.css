@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+}
+
+.wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: calc(var(--header-height) + var(--spacing-large)) var(--spacing-large) var(--spacing-large) var(--spacing-large);
+    position: relative;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+}
+
+.man {
+    display: block;
+    margin: 0 auto;
+    height: 320px;
+    width: auto;
+}
+
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
