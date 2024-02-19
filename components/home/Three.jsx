@@ -21,7 +21,9 @@ function Plane() {
     };
 
     const uniforms = useMemo(() => {
-        let colors = ["#a960ee", "#ff333d", "#90e0ff", "#ffcb57"];
+        let colors = ["#a960ee", "#072AF0", "#07BDF0", "#405874"];
+        //let colors = ["#5E7692", "#0EBDED", "#7D0EED", "#0E30ED"];
+        //let colors = ["#2F07F0", "#ff333d", "#90e0ff", "#ffcb57"];
         colors = colors.map((color) => new THREE.Color(color));
         return {
             time: { value: 0 },

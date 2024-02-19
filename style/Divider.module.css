@@ -15,6 +15,17 @@
     background-color: var(--palette-background);
 }
 
+.divider:before {
+    transform: skew(0deg,15deg);
+    transform-origin: top left;
+}
+
+.divider:after {
+    right: 0;
+    transform: skew(0deg,-15deg);
+    transform-origin: top right;
+}
+
 @media (min-width: 768px) {
     .divider:before, .divider:after {
         height: 100%;
@@ -29,17 +40,6 @@
     .divider:after {
         transform: skew(0deg,-10deg);
     }
-}
-
-.divider:before {
-    transform: skew(0deg,15deg);
-    transform-origin: top left;
-}
-
-.divider:after {
-    right: 0;
-    transform: skew(0deg,-15deg);
-    transform-origin: top right;
 }
 
 .primary:before, .primary:after {

@@ -28,6 +28,40 @@
     backdrop-filter: blur(10px);
 }
 
+.cards article > *:not(:last-child) {
+    margin: 0 0 var(--spacing-small) 0;
+}
+
+.cards article .title {
+    font-size: 1.4rem;
+}
+
+.cards article ul {
+    padding-bottom: var(--spacing-small);
+    border-bottom: 2px solid var(--translucent-foreground);
+}
+
+.cards article ul li:not(:last-child) {
+    margin: 0 0 calc(var(--spacing-small) / 2);
+}
+
+.cards article .price {
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+}
+
+.cards article .price span {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: var(--palette-foreground);
+    color: var(--palette-background);
+    border-radius: 5px;
+    width: fit-content;
+}
+
 .cards article.p4 {
     transform: translateX(-80%) scale(0.2);
     opacity: 0;

@@ -23,7 +23,15 @@ export default function Slideshow() {
     return (
         <main className={styles.container}>
             <div className={styles.cards}>
-                <Card number={0} slide={slide} title="Identité" />
+                <Card number={0} slide={slide} title="Identité">
+                    <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>Création d'illustrations pour support physique ou numérique</li>
+                    </ul>
+                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                </Card>
                 <Card number={1} slide={slide} title="SEO & Publicité" />
                 <Card number={2} slide={slide} title="Réseaux Sociaux" />
                 <Card number={3} slide={slide} title="Web" />
@@ -70,7 +78,7 @@ function Card({ number, slide, title, children }) {
     }
     return (
         <article className={status}>
-            <p>{title}</p>
+            <p className={styles.title}>{title}</p>    
             {children}
         </article>
     );
