@@ -28,7 +28,7 @@ export default function Slideshow() {
                         <li>Création ou refonte charte graphique</li>
                         <li>Création ou refonte de logo</li>
                         <li>Choix de typographie sur-mesure</li>
-                        <li>Création d'illustrations pour support physique ou numérique</li>
+                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
                     </ul>
                     <p className={styles.price}>A partir de <span>700 $</span></p>
                 </Card>
