@@ -4,8 +4,6 @@ import Values from "@/components/home/Values";
 import Hook from "@/components/home/Hook";
 import Services from "@/components/home/Services";
 import Method from "@/components/home/Method";
-import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/solid";
-import Button from "@/components/Button";
 import { Suspense } from "react";
 import Three from "@/components/home/Three";
 
