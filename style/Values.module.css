@@ -6,7 +6,7 @@
     max-width: 980px;
     margin: 0 auto;
     display: flex;
-    gap: var(--spacing-large);
+    gap: calc(var(--spacing-large) * 2);
     flex-wrap: wrap;
     padding-right: var(--spacing-large);
     padding-left: var(--spacing-large);

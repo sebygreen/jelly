@@ -1,15 +1,19 @@
-.active {
+.container {
+    display: flex;
+    gap: var(--spacing-small);
     position: relative;
 }
 
-.active:before {
-    content: "";
+.active {
+
+}
+
+.indicator {
     position: absolute;
-    height: 5px;
-    width: 5px;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 2px;
+    border-radius: 1px;
+    bottom: -4px;
+    left: 0;
     background-color: var(--frosty-foreground);
-    border-radius: 50px;
+    transition: width 200ms ease, transform 200ms ease, opacity 200ms ease;
 }
