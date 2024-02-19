@@ -11,11 +11,24 @@ function variant(icon, text) {
     }
 }
 
-export default function Button({ type, icon, text, href, action, platform, disabled }) {
+export default function Button({
+    type,
+    inverted,
+    icon,
+    text,
+    href,
+    action,
+    disabled,
+}) {
     if (type === "route") {
         //text, icon, href
         return (
-            <Link href={href} className={`${styles.anchor} ${variant(icon, text)}`}>
+            <Link
+                href={href}
+                className={`${styles.anchor} ${variant(icon, text)} ${
+                    inverted ? styles.inverted : undefined
+                }`}
+            >
                 {text && <p>{text}</p>}
                 {icon && icon}
             </Link>
@@ -23,7 +36,13 @@ export default function Button({ type, icon, text, href, action, platform, disab
     } else if (type === "anchor") {
         //text, icon, href
         return (
-            <a href={href} target="_blank" className={`${styles.anchor} ${variant(icon, text)}`}>
+            <a
+                href={href}
+                target="_blank"
+                className={`${styles.anchor} ${variant(icon, text)} ${
+                    inverted ? styles.inverted : undefined
+                }`}
+            >
                 {text && <p>{text}</p>}
                 {icon && icon}
             </a>
@@ -31,7 +50,12 @@ export default function Button({ type, icon, text, href, action, platform, disab
     } else if (type === "button") {
         //text, icon, action
         return (
-            <button onClick={action} className={`${styles.button} ${variant(icon, text)}`}>
+            <button
+                onClick={action}
+                className={`${styles.button} ${variant(icon, text)} ${
+                    inverted ? styles.inverted : undefined
+                }`}
+            >
                 {text && <p>{text}</p>}
                 {icon && icon}
             </button>
@@ -39,18 +63,16 @@ export default function Button({ type, icon, text, href, action, platform, disab
     } else if (type === "submit") {
         //text, icon, disabled
         return (
-            <button type="submit" className={`${styles.button} ${variant(icon, text)}`} disabled={disabled}>
+            <button
+                type="submit"
+                className={`${styles.button} ${variant(icon, text)} ${
+                    inverted ? styles.inverted : undefined
+                }`}
+                disabled={disabled}
+            >
                 {text && <p>{text}</p>}
                 {icon && icon}
             </button>
-        );
-    } else if (type === "social") {
-        //text, icon, href, platform
-        return (
-            <a href={href} target="_blank" className={`${styles.anchor} ${variant(icon, text)} ${styles[platform]}`}>
-                {text && <p>{text}</p>}
-                {icon && icon}
-            </a>
         );
     }
 }

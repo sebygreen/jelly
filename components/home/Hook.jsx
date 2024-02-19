@@ -1,10 +1,10 @@
 import styles from "@/style/Hook.module.css";
-import Divider from "@/components/Divider";
+import Divider from "@/components/home/Divider";
 
 export default function Hook() {
     return (
-        <div className={styles.container}>
-            <Divider color={"background"} />
+        <section className={styles.container}>
+            <Divider color={"primary"} />
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <h3>Pourquoi Jelly?</h3>
@@ -17,6 +17,6 @@ export default function Hook() {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

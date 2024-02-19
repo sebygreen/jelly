@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../style/Slideshow.module.css";
+import styles from "../../style/Slideshow.module.css";
 import Button from "@/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
@@ -32,10 +32,16 @@ export default function Slideshow() {
             <div className={styles.controls}>
                 <Button
                     type="button"
+                    inverted={true}
                     icon={<ArrowLeftIcon />}
                     action={previous}
                 />
-                <Button type="button" icon={<ArrowRightIcon />} action={next} />
+                <Button
+                    type="button"
+                    inverted={true}
+                    icon={<ArrowRightIcon />}
+                    action={next}
+                />
             </div>
         </main>
     );

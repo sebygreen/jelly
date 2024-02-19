@@ -1,10 +1,10 @@
 import styles from "@/style/Method.module.css";
-import Divider from "@/components/Divider";
+import Divider from "@/components/home/Divider";
 
 export default function Method() {
     return (
-        <div className={styles.container}>
-            <Divider color="primary" />
+        <section className={styles.container}>
+            <Divider color="background" />
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <article className={styles.item}>
@@ -58,6 +58,6 @@ export default function Method() {
                     </article>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

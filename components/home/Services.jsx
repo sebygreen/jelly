@@ -1,6 +1,6 @@
 import styles from "@/style/Services.module.css";
 import { Suspense } from "react";
-import Slideshow from "@/components/Slideshow";
+import Slideshow from "@/components/home/Slideshow";
 
 export default function Services({ children }) {
     return (

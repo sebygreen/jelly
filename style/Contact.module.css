@@ -9,6 +9,34 @@
     margin-bottom: 5px;
 }
 
+.select {
+    border-radius: 5px;
+    position: relative;
+    color: var(--palette-foreground);
+    background-color: var(--translucent-foreground);
+    transition: background-color 200ms;
+}
+
+.select:hover {
+    background-color: var(--palette-foreground);
+    color: var(--palette-background);
+}
+
+.select select {
+    appearance: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.select svg {
+    height: 22px;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    pointer-events: none;
+}
+
 .meta input, .meta select, .message textarea, .meta {
     width: 100%;
 }
@@ -19,6 +47,18 @@
     border: unset;
     background-color: rgba(0,0,0,.1);
     border-radius: 5px;
+}
+
+.meta input, .message textarea {
+    transition: box-shadow 200ms ease;
+}
+
+.meta input::placeholder, .message textarea::placeholder {
+    color: var(--frosty-foreground);
+}
+
+.meta input:focus, .message textarea:focus {
+    box-shadow: 0 0 0 2px var(--translucent-foreground);
 }
 
 .meta > div:not(:last-child) {

@@ -1,13 +1,13 @@
 .container {
     position: relative;
-    padding: var(--spacing-large) 0;
 }
 
 .wrapper {
     max-width: 980px;
     margin: 0 auto;
-    padding: 0 var(--spacing-large);
     position: relative;
+    padding-right: var(--spacing-large);
+    padding-left: var(--spacing-large);
 }
 
 .content {

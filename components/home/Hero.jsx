@@ -1,14 +1,11 @@
 import styles from "@/style/Hero.module.css";
 import { Suspense } from "react";
-import Three from "@/components/Three";
-import Hook from "@/components/Hook";
+import Three from "@/components/home/Three";
+import Hook from "@/components/home/Hook";
 
 export default function Hero({ children }) {
     return (
         <section className={styles.container}>
-            <Suspense fallback="Loading WebGL...">
-                <Three />
-            </Suspense>
             <div className={styles.wrapper}>
                 <figure>
                     <svg

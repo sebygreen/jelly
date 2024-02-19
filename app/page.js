@@ -1,22 +1,27 @@
 import styles from "./page.module.css";
-import Hero from "@/components/Hero";
-import Values from "@/components/Values";
-import Hook from "@/components/Hook";
-import Services from "@/components/Services";
-import Method from "@/components/Method";
+import Hero from "@/components/home/Hero";
+import Values from "@/components/home/Values";
+import Hook from "@/components/home/Hook";
+import Services from "@/components/home/Services";
+import Method from "@/components/home/Method";
 import { ChatBubbleOvalLeftIcon } from "@heroicons/react/24/solid";
 import Button from "@/components/Button";
+import { Suspense } from "react";
+import Three from "@/components/home/Three";
 
 export default function Page() {
     return (
-        <main>
-            <Hero>
+        <main className={styles.container}>
+            <div className={styles.three}>
+                <Suspense fallback="Loading WebGL...">
+                    <Three />
+                </Suspense>
+                <Hero />
                 <Hook />
-            </Hero>
+            </div>
             <Values />
-            <Services>
-                <Method />
-            </Services>
+            <Services />
+            <Method />
             <section className={styles.contact}>
                 <div>
                     <h3>🤝</h3>

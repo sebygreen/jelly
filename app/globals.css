@@ -1,5 +1,5 @@
 :root {
-    --palette-primary: rgb(94, 118, 146);
+    --palette-primary: rgb(64, 88, 116);
     --palette-background: rgb(44, 68, 96);
     --palette-foreground: white;
     --translucent-primary: rgba(94, 118, 146, .2);
@@ -9,7 +9,7 @@
     --frosty-background: rgba(44, 68, 96, .5);
     --frosty-foreground: rgba(255, 255, 255, 0.4);
     --frosty-black: rgba(0,0,0,0.4);
-    --header-height: 87px; /*manually set*/
+    --header-height: 70px; /*manually set*/
     --spacing-large: 30px;
     --spacing-small: 10px;
 }

@@ -1,10 +1,15 @@
+.container {
+    background-color: var(--palette-primary);
+}
+
 .wrapper {
     max-width: 980px;
     margin: 0 auto;
-    padding: var(--spacing-large);
     display: flex;
     gap: var(--spacing-large);
     flex-wrap: wrap;
+    padding-right: var(--spacing-large);
+    padding-left: var(--spacing-large);
 }
 
 .wrapper article {
@@ -18,12 +23,15 @@
 .wrapper article figure {
     width: fit-content;
     margin: 0 auto;
+    background-color: var(--palette-background);
+    border-radius: 50%;
+    padding: 15px;
 }
 
 .wrapper article figure img {
     display: block;
-    height: 140px;
-    width: 140px;
+    height: 120px;
+    width: 120px;
 }
 
 .wrapper article h3 {

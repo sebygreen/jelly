@@ -1,11 +1,16 @@
-.contact {
-    background-color: var(--palette-primary);
+.container section {
+    padding-bottom: calc(var(--spacing-large) * 2);
+}
+
+.three {
+    position: relative;
 }
 
 .contact > div {
+    padding-right: var(--spacing-large);
+    padding-left: var(--spacing-large);
     max-width: fit-content;
     margin: 0 auto;
-    padding: 0 var(--spacing-large) var(--spacing-large) var(--spacing-large);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-large);

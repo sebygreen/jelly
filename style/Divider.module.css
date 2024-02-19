@@ -1,6 +1,6 @@
 .divider {
     position: absolute;
-    height: calc(100% - var(--spacing-large));
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
@@ -15,9 +15,19 @@
     background-color: var(--palette-background);
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
     .divider:before, .divider:after {
         height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .divider:before {
+        transform: skew(0deg,10deg);
+    }
+
+    .divider:after {
+        transform: skew(0deg,-10deg);
     }
 }
 

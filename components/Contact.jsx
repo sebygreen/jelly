@@ -1,6 +1,7 @@
 import Button from "@/components/Button";
 import styles from "@/style/Contact.module.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import { ChevronUpDownIcon } from "@heroicons/react/24/solid";
 
 export default function Contact() {
     async function handleSubmit() {
@@ -12,19 +13,22 @@ export default function Contact() {
     return (
         <form action={handleSubmit} className={styles.container}>
             <div className={styles.meta}>
-                <div>
+                <div className={styles.input}>
                     <label htmlFor="package">Package</label>
-                    <select name="package" id="package">
-                        <option value="static">Site Vitrine</option>
-                        <option value="identity">Identité Visuelle</option>
-                        <option value="eshop">Boutique Premium</option>
-                        <option value="communication">
-                            Pack Communication
-                        </option>
-                        <option value="full">Complet</option>
-                    </select>
+                    <div className={styles.select}>
+                        <ChevronUpDownIcon />
+                        <select name="package" id="package">
+                            <option value="static">Site Vitrine</option>
+                            <option value="identity">Identité Visuelle</option>
+                            <option value="eshop">Boutique Premium</option>
+                            <option value="communication">
+                                Pack Communication
+                            </option>
+                            <option value="full">Complet</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label htmlFor="name">Name</label>
                     <input
                         id="name"
@@ -33,7 +37,7 @@ export default function Contact() {
                         placeholder="John"
                     />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label htmlFor="name">Surname</label>
                     <input
                         id="surname"
@@ -42,7 +46,7 @@ export default function Contact() {
                         placeholder="Appleseed"
                     />
                 </div>
-                <div>
+                <div className={styles.input}>
                     <label htmlFor="email">Email</label>
                     <input
                         id="email"

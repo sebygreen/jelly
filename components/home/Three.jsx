@@ -46,7 +46,7 @@ function Plane() {
 
 export default function Three() {
     return (
-        <aside className={styles.container}>
+        <div className={styles.container}>
             <Canvas
                 camera={{
                     fov: 20,
@@ -60,7 +60,7 @@ export default function Three() {
                 <directionalLight color={0xffffff} intensity={0.5} />
                 <Plane />
             </Canvas>
-        </aside>
+        </div>
     );
 }
 
