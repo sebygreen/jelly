@@ -1,5 +1,6 @@
 import styles from "@/style/Values.module.css";
 import Image from "next/image";
+import Three from "./Three";
 
 export default function Values() {
     return (
@@ -7,9 +8,10 @@ export default function Values() {
             <div className={styles.wrapper}>
                 <article className={styles.philosophy}>
                     <figure>
+                        <i className="fas fa-lightbulb"></i>
                         <Image
-                            src={"/3dicons/bulb.png"}
-                            alt={"a light bulb"}
+                            src={"/3dicons/think.svg"}
+                            alt={"a man doing philosophy"}
                             width={2400}
                             height={2400}
                         />
@@ -29,7 +31,7 @@ export default function Values() {
                 <article className={styles.projects}>
                     <figure>
                         <Image
-                            src={"/3dicons/brush.png"}
+                            src={"/3dicons/paint.svg"}
                             alt={"a paint brush"}
                             width={2400}
                             height={2400}
