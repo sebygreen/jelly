@@ -1,12 +1,14 @@
 :root {
-    --palette-primary: rgb(64, 88, 116);
-    --palette-background: rgb(44, 68, 96);
+    /* --palette-primary: rgb(64, 88, 116); */
+    --palette-primary: rgb(1, 98, 76);
+    --palette-background: rgb(23, 66, 64);
     --palette-foreground: white;
     --translucent-primary: rgba(94, 118, 146, .2);
-    --translucent-background: rgba(44, 68, 96, .2);
+    --translucent-background: rgba(44, 68, 96, .2); /* 2ème couleur */
     --translucent-foreground: rgba(255, 255, 255, 0.1);
     --frosty-primary: rgba(94, 118, 146, .5);
-    --frosty-background: rgba(44, 68, 96, .5);
+    /* --frosty-background: rgba(44, 68, 96, .5); */
+    --frosty-background: rgba(23, 66, 64); /* 2ème couleur */
     --frosty-foreground: rgba(255, 255, 255, 0.4);
     --frosty-black: rgba(0,0,0,0.4);
     --header-height: 70px; /*manually set*/

@@ -6,6 +6,8 @@ import Services from "@/components/home/Services";
 import Method from "@/components/home/Method";
 import { Suspense } from "react";
 import Three from "@/components/home/Three";
+import Image from "next/image";
+
 
 export default function Page() {
     return (
@@ -22,8 +24,15 @@ export default function Page() {
             <Method />
             <section className={styles.contact}>
                 <div>
-                    <h3>🤝</h3>
-                    <h4>Contactez-nous dés aujourd&apos;hui.</h4>
+                    <a href="/contact">
+                        <Image
+                            src={"/3dicons/hand-shake.svg"}
+                            alt={"a hand shake"}
+                            width={64}
+                            height={64}
+                        />
+                    </a>
+                    <a href="/contact"><h4>Contactez-nous dés aujourd&apos;hui.</h4></a>
                 </div>
             </section>
         </main>
