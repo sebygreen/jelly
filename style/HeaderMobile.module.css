@@ -1,0 +1,53 @@
+.headerMobileButton {
+    padding: 0.5rem; /* Adjust padding as needed */
+    color: white;
+    border: 0;
+    background-color: transparent;
+}
+
+.headerMobileIcon {
+    height: 2.5rem; /* 32px */
+    width: 2.5rem; /* 32px */
+}
+
+.headerContainer {
+    position: fixed;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    width: 100%; /* Ensure it spans the full width */
+    background-color: var(--frosty-black);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    /* Add any additional styling such as padding, background, etc. */
+}
+
+.fullScreenMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--palette-background);
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.fullScreenMenu nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fullScreenMenu nav ul li {
+    margin: 1rem 0; /* Adjust the margin as needed */
+}
+
+.fullScreenMenuLink {
+    color: white;
+    font-size: 3rem; /* 20px */
+    text-decoration: none;
+}
