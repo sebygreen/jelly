@@ -5,6 +5,7 @@ import styles from "../../style/Slideshow.module.css";
 import Button from "@/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 export default function Slideshow() {
     let [slide, setSlide] = useState(0);
@@ -20,53 +21,67 @@ export default function Slideshow() {
         }
     }
 
+    function redirectToNosServices(id) {
+        window.location.href = "/nos-services#service-" + id;
+    }
+
     return (
         <main className={styles.container}>
             <div className={styles.cards}>
                 <Card number={0} slide={slide} title="Identité">
-                    <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <Link href="/nos-services#service-Identité">
+                        <ul>
+                            <li>Création ou refonte charte graphique</li>
+                            <li>Création ou refonte de logo</li>
+                            <li>Choix de typographie sur-mesure</li>
+                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        </ul>
+                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                    </Link>
                 </Card>
                 <Card number={1} slide={slide} title="SEO & Publicité">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <Link href="/nos-services#service-SEO & Publicité">
+                        <ul>
+                            <li>Création ou refonte charte graphique</li>
+                            <li>Création ou refonte de logo</li>
+                            <li>Choix de typographie sur-mesure</li>
+                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        </ul>
+                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                    </Link>
                 </Card>
                 <Card number={2} slide={slide} title="Réseaux Sociaux">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <Link href="/nos-services#service-Réseaux Sociaux">
+                        <ul>
+                            <li>Création ou refonte charte graphique</li>
+                            <li>Création ou refonte de logo</li>
+                            <li>Choix de typographie sur-mesure</li>
+                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        </ul>
+                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                    </Link>
                 </Card>
                 <Card number={3} slide={slide} title="Web">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <Link href="/nos-services#service-Web">
+                        <ul>
+                            <li>Création ou refonte charte graphique</li>
+                            <li>Création ou refonte de logo</li>
+                            <li>Choix de typographie sur-mesure</li>
+                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        </ul>
+                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                    </Link>
                 </Card>
                 <Card number={4} slide={slide} title="Communication">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <Link href="/nos-services#service-Communication">
+                        <ul>
+                            <li>Création ou refonte charte graphique</li>
+                            <li>Création ou refonte de logo</li>
+                            <li>Choix de typographie sur-mesure</li>
+                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        </ul>
+                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                    </Link>
                 </Card>
             </div>
             <div className={styles.controls}>
