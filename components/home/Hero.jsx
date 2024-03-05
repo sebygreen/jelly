@@ -5,7 +5,7 @@ export default function Hero({ children }) {
         <section className={styles.container}>
             <div className={styles.wrapper}>
                 <figure>
-                    <svg
+                    {/* <svg
                         className={styles.man}
                         width="225"
                         height="438"
@@ -55,7 +55,7 @@ export default function Hero({ children }) {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                         />
-                    </svg>
+                    </svg> */}
                 </figure>
                 <div className={styles.content}>
                     <h2>Jelly Agency</h2>

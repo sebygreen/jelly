@@ -22,12 +22,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing-small);
+    color: var(--palette-background);
 }
 
 .grid article {
     padding: var(--spacing-large);
     background-color: crimson;
     border-radius: 10px;
+    background: white;
 }
 
 .grid article figure {
