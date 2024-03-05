@@ -1,0 +1,47 @@
+.container {
+    padding-top: calc(var(--header-height) + var(--spacing-large));
+    padding-bottom: var(--spacing-large);
+}
+
+.container h1 {
+    margin-bottom: var(--spacing-small);
+}
+
+.container h2 {
+    font-size: x-large;
+}
+
+.container h3 {
+    font-size: large;
+}
+
+.wrapper {
+    max-width: 980px;
+    padding-right: var(--spacing-large);
+    padding-left: var(--spacing-large);
+    margin: 0 auto;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    display: flex; /* Assurez-vous que l'icône est centrée */
+    align-items: center; /* Centre l'icône verticalement */
+    justify-content: center; /* Centre l'icône horizontalement */
+    margin-right: var(--spacing-small);
+}
+
+.serviceDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Ajouté pour aligner verticalement le contenu avec l'icône */
+    margin-bottom: var(--spacing-large);
+    margin-left: var(--spacing-large);
+}
+
+.serviceAnchor::before {
+    content: "";
+    display: block;
+    height: 150px; /* Hauteur de votre en-tête */
+    margin-top: -150px; /* Négatif de la hauteur de votre en-tête */
+}
