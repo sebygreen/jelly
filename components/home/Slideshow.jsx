@@ -32,10 +32,42 @@ export default function Slideshow() {
                     </ul>
                     <p className={styles.price}>A partir de <span>700 $</span></p>
                 </Card>
-                <Card number={1} slide={slide} title="SEO & Publicité" />
-                <Card number={2} slide={slide} title="Réseaux Sociaux" />
-                <Card number={3} slide={slide} title="Web" />
-                <Card number={4} slide={slide} title="Communication" />
+                <Card number={1} slide={slide} title="SEO & Publicité">
+                <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                    </ul>
+                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                </Card>
+                <Card number={2} slide={slide} title="Réseaux Sociaux">
+                <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                    </ul>
+                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                </Card>
+                <Card number={3} slide={slide} title="Web">
+                <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                    </ul>
+                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                </Card>
+                <Card number={4} slide={slide} title="Communication">
+                <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                    </ul>
+                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                </Card>
             </div>
             <div className={styles.controls}>
                 <Button
