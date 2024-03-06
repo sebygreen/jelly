@@ -8,22 +8,28 @@ import HeaderMobile from "@/components/HeaderMobile";
 import { useState, useEffect } from "react";
 
 import localFont from "next/font/local";
-const satoshi = localFont({
-    src: [
-        {
-            path: "../fonts/Satoshi[wght].ttf",
-            display: "swap",
-            style: "normal",
-            weight: "100 900",
-        },
-        {
-            path: "../fonts/Satoshi-Italic[wght].ttf",
-            display: "swap",
-            style: "italic",
-            weight: "100 900",
-        },
-    ],
-});
+// const satoshi = localFont({
+//     src: [
+//         {
+//             path: "../fonts/Satoshi[wght].ttf",
+//             display: "swap",
+//             style: "normal",
+//             weight: "100 900",
+//         },
+//         {
+//             path: "../fonts/Satoshi-Italic[wght].ttf",
+//             display: "swap",
+//             style: "italic",
+//             weight: "100 900",
+//         },
+//         {
+//             path: '../fonts/\salbabida-sans-regulartrial.otf',
+//             display: 'swap',
+//             style: 'normal',
+//             weight: '100 900',
+//         }
+//     ],
+// });
 
 const metadata = {
     title: "Jelly Agency",
@@ -50,7 +56,7 @@ export default function RootLayout({ children }) {
 
     return (
         <html lang="en">
-            <body className={satoshi.className}>
+            <body>
                 {isMobile ? <HeaderMobile /> : <Header />}
                 {children}
                 <Footer />

@@ -47,6 +47,7 @@
 
 .cards article .price {
     font-size: 1rem;
+    margin-top: 10px;
     display: block;
     text-align: right;
 }
@@ -107,3 +108,15 @@
     gap: 20px;
     z-index: 1000;
 }
+
+.controlButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--palette-foreground);
+    color: var(--palette-background);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+

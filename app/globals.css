@@ -43,3 +43,54 @@ button, input, textarea, select {
     font-family: inherit;
     font-size: inherit;
 }
+
+
+@font-face {
+  font-family: 'Salbadida Sans';
+  src: url('/fonts/salbabida.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi[wght].ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-family: 'Salbadida Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+h1 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+p {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+h3 {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+body > main > div > section.Hero_container___riuA > div > div > p {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+a {
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
