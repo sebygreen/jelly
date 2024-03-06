@@ -36,51 +36,51 @@ export default function Slideshow() {
                             <li>Choix de typographie sur-mesure</li>
                             <li>Création d&apos;illustrations pour support physique ou numérique</li>
                         </ul>
-                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                        <p className={styles.price}>Charte graphique à partir de <span>695 €</span></p>
                     </Link>
                 </Card>
                 <Card number={1} slide={slide} title="SEO & Publicité">
                     <Link href="/nos-services#service-SEO & Publicité">
                         <ul>
-                            <li>Création ou refonte charte graphique</li>
-                            <li>Création ou refonte de logo</li>
-                            <li>Choix de typographie sur-mesure</li>
-                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                            <li>Analyse et intégration de mot clés SEO à votre site</li>
+                            <li>Rédaction de contenu optimisé pour le SEO</li>
+                            <li>Optimisation du google page rank des pages de votre site</li>
+                            <li>Création et gestion de campagnes Google Ads</li>
                         </ul>
-                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                        <p className={styles.price}>Analyse de mots clés à partir de <span>190 €</span></p>
                     </Link>
                 </Card>
                 <Card number={2} slide={slide} title="Réseaux Sociaux">
                     <Link href="/nos-services#service-Réseaux Sociaux">
                         <ul>
-                            <li>Création ou refonte charte graphique</li>
-                            <li>Création ou refonte de logo</li>
-                            <li>Choix de typographie sur-mesure</li>
-                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                            <li>Community manager</li>
+                            <li>Rapport de statistiques</li>
+                            <li>Création de template de publication</li>
+                            <li>Shooting photos</li>
                         </ul>
-                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                        <p className={styles.price}><span>Sur devis</span></p>
                     </Link>
                 </Card>
                 <Card number={3} slide={slide} title="Web">
                     <Link href="/nos-services#service-Web">
                         <ul>
-                            <li>Création ou refonte charte graphique</li>
-                            <li>Création ou refonte de logo</li>
-                            <li>Choix de typographie sur-mesure</li>
-                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                            <li>Création site vitrine</li>
+                            <li>Création site Ecommerce</li>
+                            <li>Refonte de site internet</li>
+                            <li>Système de réservation</li>
                         </ul>
-                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                        <p className={styles.price}>Site vitrine à partir de <span>1490 €</span></p>
                     </Link>
                 </Card>
                 <Card number={4} slide={slide} title="Communication">
                     <Link href="/nos-services#service-Communication">
                         <ul>
-                            <li>Création ou refonte charte graphique</li>
-                            <li>Création ou refonte de logo</li>
-                            <li>Choix de typographie sur-mesure</li>
-                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                            <li>Création supports de communication physique</li>
+                            <li>Création supports de communication numérique</li>
+                            <li>Redaction de newsletter et emails marketing</li>
+                            <li>Organisation d'évenements</li>
                         </ul>
-                        <p className={styles.price}>A partir de <span>700 $</span></p>
+                        <p className={styles.price}>Newsletter bi-mensuelle à partir de <span>145 €</span></p>
                     </Link>
                 </Card>
             </div>
@@ -90,12 +90,14 @@ export default function Slideshow() {
                     inverted={true}
                     icon={<ArrowLeftIcon />}
                     action={previous}
+                    className={styles.controlButton}
                 />
                 <Button
                     type="button"
                     inverted={true}
                     icon={<ArrowRightIcon />}
                     action={next}
+                    className={styles.controlButton}
                 />
             </div>
         </main>
