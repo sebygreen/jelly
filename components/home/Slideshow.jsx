@@ -6,6 +6,8 @@ import Button from "@/components/Button";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { useSwipeable } from "react-swipeable"; // Importez useSwipeable
+
 
 export default function Slideshow() {
     let [slide, setSlide] = useState(0);
@@ -25,9 +27,17 @@ export default function Slideshow() {
         window.location.href = "/nos-services#service-" + id;
     }
 
+    // Création des gestionnaires de glissement
+    const handlers = useSwipeable({
+        onSwipedLeft: () => next(),
+        onSwipedRight: () => previous(),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
+
     return (
         <main className={styles.container}>
-            <div className={styles.cards}>
+            <div {...handlers} className={styles.cards}>
                 <Card number={0} slide={slide} title="Identité">
                     <Link href="/nos-services#service-Identité">
                         <ul>
