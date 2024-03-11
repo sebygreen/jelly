@@ -78,7 +78,7 @@ export default function Slideshow() {
                             <li>Création supports de communication physique</li>
                             <li>Création supports de communication numérique</li>
                             <li>Redaction de newsletter et emails marketing</li>
-                            <li>Organisation d'évenements</li>
+                            <li>Organisation d&apos;évenements</li>
                         </ul>
                         <p className={styles.price}>Newsletter bi-mensuelle à partir de <span>145 €</span></p>
                     </Link>
