@@ -5,7 +5,7 @@ export default function Page() {
     return (
         <main className={styles.container}>
             <div className={styles.wrapper}>
-                <h1>Projects</h1>
+                <h1>Nos réalisations</h1>
                 <section className={styles.design}>
                     <h2>Design</h2>
                     <div className={styles.grid}>
@@ -92,7 +92,7 @@ function Project({ children, img, title }) {
             <figure>
                 <Image src={img} alt={title} fill />
             </figure>
-            <h2>{title}</h2>
+            <h2 className={styles.projectTitle}>{title}</h2>
             {children}
         </article>
     );

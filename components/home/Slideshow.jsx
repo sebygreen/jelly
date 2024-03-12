@@ -8,7 +8,6 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useSwipeable } from "react-swipeable"; // Importez useSwipeable
 
-
 export default function Slideshow() {
     let [slide, setSlide] = useState(0);
 
@@ -31,67 +30,109 @@ export default function Slideshow() {
     const handlers = useSwipeable({
         onSwipedLeft: () => next(),
         onSwipedRight: () => previous(),
+        delta: 10, // Vous pouvez ajuster cette valeur
         preventDefaultTouchmoveEvent: true,
-        trackMouse: true
+        trackTouch: true,
+        trackMouse: false, // La souris n'est généralement pas utilisée sur le téléphone
+        touchEventOptions: { passive: true } // Cette option peut améliorer la fluidité sur certains navigateurs
     });
+    
 
     return (
         <main className={styles.container}>
             <div {...handlers} className={styles.cards}>
-                <Card number={0} slide={slide} title="Identité">
-                    <Link href="/nos-services#service-Identité">
-                        <ul>
-                            <li>Création ou refonte charte graphique</li>
-                            <li>Création ou refonte de logo</li>
-                            <li>Choix de typographie sur-mesure</li>
-                            <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                        </ul>
-                        <p className={styles.price}>Charte graphique à partir de <span>695 €</span></p>
-                    </Link>
+                <Card number={0} slide={slide} title="Web">
+                    <ul>
+                        <li>Création site vitrine</li>
+                        <li>Création site Ecommerce</li>
+                        <li>Refonte de site internet</li>
+                        <li>Système de réservation</li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Site vitrine à partir de <span>1490 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                                <ArrowRightIcon />
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
-                <Card number={1} slide={slide} title="SEO & Publicité">
-                    <Link href="/nos-services#service-SEO & Publicité">
-                        <ul>
-                            <li>Analyse et intégration de mot clés SEO à votre site</li>
-                            <li>Rédaction de contenu optimisé pour le SEO</li>
-                            <li>Optimisation du google page rank des pages de votre site</li>
-                            <li>Création et gestion de campagnes Google Ads</li>
-                        </ul>
-                        <p className={styles.price}>Analyse de mots clés à partir de <span>190 €</span></p>
-                    </Link>
+                <Card number={1} slide={slide} title="Identité">
+                    <ul>
+                        <li>Création ou refonte charte graphique</li>
+                        <li>Création ou refonte de logo</li>
+                        <li>Choix de typographie sur-mesure</li>
+                        <li>
+                            Création d&apos;illustrations pour tout support
+                        </li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Charte graphique à partir de <span>695 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                                <ArrowRightIcon />
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
-                <Card number={2} slide={slide} title="Réseaux Sociaux">
-                    <Link href="/nos-services#service-Réseaux Sociaux">
-                        <ul>
-                            <li>Community manager</li>
-                            <li>Rapport de statistiques</li>
-                            <li>Création de template de publication</li>
-                            <li>Shooting photos</li>
-                        </ul>
-                        <p className={styles.price}><span>Sur devis</span></p>
-                    </Link>
+                <Card number={2} slide={slide} title="SEO & Publicité">
+                    <ul>
+                        <li>Intégration de mot clés SEO à votre site</li>
+                        <li>Rédaction de contenu optimisé pour le SEO</li>
+                        <li>Optimisation du google page rank de votre site</li>
+                        <li>Gestion de campagnes Google Ads</li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Analyse de mots clés à partir de <span>190 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                                <ArrowRightIcon />
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
-                <Card number={3} slide={slide} title="Web">
-                    <Link href="/nos-services#service-Web">
-                        <ul>
-                            <li>Création site vitrine</li>
-                            <li>Création site Ecommerce</li>
-                            <li>Refonte de site internet</li>
-                            <li>Système de réservation</li>
-                        </ul>
-                        <p className={styles.price}>Site vitrine à partir de <span>1490 €</span></p>
-                    </Link>
+                <Card number={3} slide={slide} title="Réseaux Sociaux">
+                    <ul>
+                        <li>Community manager</li>
+                        <li>Rapport de statistiques</li>
+                        <li>Création de template de publication</li>
+                        <li>Shooting photos</li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            <span>Sur devis</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                                <ArrowRightIcon />
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
                 <Card number={4} slide={slide} title="Communication">
-                    <Link href="/nos-services#service-Communication">
-                        <ul>
-                            <li>Création supports de communication physique</li>
-                            <li>Création supports de communication numérique</li>
-                            <li>Redaction de newsletter et emails marketing</li>
-                            <li>Organisation d&apos;évenements</li>
-                        </ul>
-                        <p className={styles.price}>Newsletter bi-mensuelle à partir de <span>145 €</span></p>
-                    </Link>
+                    <ul>
+                        <li>Création de supports physiques</li>
+                        <li>Création de supports numériques</li>
+                        <li>Redaction de newsletter et emails marketing</li>
+                        <li>Organisation d&apos;évenements</li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Newsletter bi-mensuelle à partir de{" "}
+                            <span>145 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                                <ArrowRightIcon />
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
             </div>
             <div className={styles.controls}>
@@ -137,7 +178,7 @@ function Card({ number, slide, title, children }) {
     }
     return (
         <article className={status}>
-            <p className={styles.title}>{title}</p>    
+            <p className={styles.title}>{title}</p>
             {children}
         </article>
     );
