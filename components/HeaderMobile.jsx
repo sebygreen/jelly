@@ -15,16 +15,19 @@ export default function HeaderMobile() {
             </button>
             {isOpen && (
                 <div className={style.fullScreenMenu}>
+                     <button onClick={toggleMenu} className={style.headerCloseIcon}>
+                            <XMarkIcon className={style.headerMobileIcon} />
+                    </button>
                     <nav>
                         <ul>
                             <li onClick={toggleMenu}>
-                                <Link href="/" className={style.fullScreenMenuLink}>
-                                   Home
+                                <Link href="/contact" className={style.fullScreenMenuLink}>
+                                    Contact
                                 </Link>
                             </li>
                             <li onClick={toggleMenu}>
-                                <Link href="/about" className={style.fullScreenMenuLink}>
-                                    A propos
+                                <Link href="/nos-services" className={style.fullScreenMenuLink}>
+                                    Services
                                 </Link>
                             </li>
                             <li onClick={toggleMenu}>
@@ -33,8 +36,13 @@ export default function HeaderMobile() {
                                 </Link>
                             </li>
                             <li onClick={toggleMenu}>
-                                <Link href="/contact" className={style.fullScreenMenuLink}>
-                                    Contact
+                                <Link href="/" className={style.fullScreenMenuLink}>
+                                   Home
+                                </Link>
+                            </li>
+                            <li onClick={toggleMenu}>
+                                <Link href="/about" className={style.fullScreenMenuLink}>
+                                    A propos
                                 </Link>
                             </li>
                         </ul>

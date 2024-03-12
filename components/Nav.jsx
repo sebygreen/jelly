@@ -37,6 +37,12 @@ export default function Nav() {
                 A propos
             </Link>
             <Link
+                className={pathname === "/nos-services" ? "active" : undefined}
+                href="/nos-services"
+            >
+               Services
+            </Link>
+            <Link
                 className={pathname === "/projects" ? "active" : undefined}
                 href="/projects"
             >

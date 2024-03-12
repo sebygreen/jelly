@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    gap: var(--spacing-small);
+    gap: var(--spacing-large);
     position: relative;
 }
 
