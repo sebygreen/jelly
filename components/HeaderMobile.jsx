@@ -24,12 +24,12 @@ export default function HeaderMobile() {
                             </li>
                             <li onClick={toggleMenu}>
                                 <Link href="/about" className={style.fullScreenMenuLink}>
-                                    About
+                                    A propos
                                 </Link>
                             </li>
                             <li onClick={toggleMenu}>
                                 <Link href="/projects" className={style.fullScreenMenuLink}>
-                                    Projects
+                                    Projets
                                 </Link>
                             </li>
                             <li onClick={toggleMenu}>

@@ -34,13 +34,13 @@ export default function Nav() {
                 className={pathname === "/about" ? "active" : undefined}
                 href="/about"
             >
-                About
+                A propos
             </Link>
             <Link
                 className={pathname === "/projects" ? "active" : undefined}
                 href="/projects"
             >
-                Projects
+                Projets
             </Link>
             <div className={styles.indicator} />
         </nav>

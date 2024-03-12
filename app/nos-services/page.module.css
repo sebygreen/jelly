@@ -5,10 +5,11 @@
 
 .container h1 {
     margin-bottom: var(--spacing-small);
+    font-size: 4rem;
 }
 
 .container h2 {
-    font-size: x-large;
+    font-size: 2rem;
 }
 
 .container h3 {
@@ -22,6 +23,7 @@
     margin: 0 auto;
 }
 
+
 .icon {
     width: 24px;
     height: 24px;
@@ -31,12 +33,27 @@
     margin-right: var(--spacing-small);
 }
 
+@media (max-width: 768px) {
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .serviceDetails {
     display: flex;
     flex-direction: row;
     align-items: center; /* Ajouté pour aligner verticalement le contenu avec l'icône */
     margin-bottom: var(--spacing-large);
     margin-left: var(--spacing-large);
+}
+
+@media (max-width: 768px) {
+    .serviceDetails {
+        flex-direction: row;
+        align-items: flex-start;
+        transform: translateX(-37px); /* Déplace l'icône de 5px vers la gauche */
+    }
 }
 
 .serviceAnchor::before {

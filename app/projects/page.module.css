@@ -7,6 +7,20 @@
     margin-bottom: var(--spacing-small);
 }
 
+.container h1 {
+    font-size: 3rem;
+}
+
+.container h2 {
+    font-size: 2rem;
+}
+
+
+.projectTitle {
+    font-size: 1.7rem;
+}
+
+
 .wrapper {
     max-width: 980px;
     padding-right: var(--spacing-large);

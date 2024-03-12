@@ -5,6 +5,7 @@
 
 .container h1 {
     margin-bottom: var(--spacing-small);
+    font-size: 2.5rem;
 }
 
 .wrapper {

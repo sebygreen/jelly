@@ -1,3 +1,18 @@
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     transform-style: preserve-3d;
     display: flex;
@@ -33,12 +48,15 @@
 }
 
 .cards article .title {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .cards article ul {
     padding-bottom: var(--spacing-small);
     border-bottom: 2px solid var(--translucent-foreground);
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 .cards article ul li:not(:last-child) {
