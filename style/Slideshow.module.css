@@ -13,6 +13,23 @@
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .priceContainer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centre le contenu verticalement */
+    }
+    .arrowContainer {
+        justify-content: center;
+        width: 60px; /* Ajustez selon la taille de votre icône */
+        height: 60px; /* Ajustez selon la taille de votre icône */
+    }
+    .price {
+        text-align: center; /* Assure que le prix est centré sous le texte */
+    }
+}
+
+
 .container {
     transform-style: preserve-3d;
     display: flex;
