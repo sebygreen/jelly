@@ -30,11 +30,11 @@ const services = [
     categorie: "SEO & Publicité",
     services: [
       {
-        nom: "Analyse, recherche et intégration de mot clés SEO à votre site",
+        nom: "Recherche et intégration de mot clés SEO à votre site",
         description: "Améliorez votre visibilité en ligne avec une stratégie de mots-clés ciblée, intégrant une recherche approfondie et une optimisation précise."
       },
       {
-        nom: "Rédaction de contenu optimisé pour le SEO",
+        nom: "Rédaction de contenu optimisé google",
         description: "Attirez un trafic qualifié avec du contenu captivant, rédigé spécifiquement pour booster votre référencement naturel."
       },
       {

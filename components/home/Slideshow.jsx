@@ -3,12 +3,14 @@
 import { useState } from "react";
 import styles from "../../style/Slideshow.module.css";
 import Button from "@/components/Button";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, ArrowLeftIcon, EllipsisHorizontalIcon} from "@heroicons/react/24/solid";
 import Link from "next/link";
 import { useSwipeable } from "react-swipeable"; // Importez useSwipeable
 
+import useMediaQuery from "@/hooks/useMediaQuery";
+
 export default function Slideshow() {
+    const isPhone = useMediaQuery('(max-width: 768px)');
     let [slide, setSlide] = useState(0);
 
     function next() {
@@ -54,7 +56,7 @@ export default function Slideshow() {
                         </p>
                         <Link href="/nos-services#service-Communication">
                             <div className={styles.arrowContainer}>
-                                <ArrowRightIcon />
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
                             </div>
                         </Link>
                     </div>
@@ -74,15 +76,15 @@ export default function Slideshow() {
                         </p>
                         <Link href="/nos-services#service-Communication">
                             <div className={styles.arrowContainer}>
-                                <ArrowRightIcon />
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
                             </div>
                         </Link>
                     </div>
                 </Card>
                 <Card number={2} slide={slide} title="SEO & Publicité">
                     <ul>
-                        <li>Intégration de mot clés SEO à votre site</li>
-                        <li>Rédaction de contenu optimisé pour le SEO</li>
+                        <li>Recherche et intégration de mot clés SEO à votre site</li>
+                        <li>Rédaction de contenu optimisé google</li>
                         <li>Optimisation du google page rank de votre site</li>
                         <li>Gestion de campagnes Google Ads</li>
                     </ul>
@@ -92,7 +94,7 @@ export default function Slideshow() {
                         </p>
                         <Link href="/nos-services#service-Communication">
                             <div className={styles.arrowContainer}>
-                                <ArrowRightIcon />
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
                             </div>
                         </Link>
                     </div>
@@ -110,7 +112,7 @@ export default function Slideshow() {
                         </p>
                         <Link href="/nos-services#service-Communication">
                             <div className={styles.arrowContainer}>
-                                <ArrowRightIcon />
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
                             </div>
                         </Link>
                     </div>
@@ -124,12 +126,11 @@ export default function Slideshow() {
                     </ul>
                     <div className={styles.priceContainer}>
                         <p className={styles.price}>
-                            Newsletter bi-mensuelle à partir de{" "}
-                            <span>145 €</span>
+                            <span>Sur devis</span>
                         </p>
                         <Link href="/nos-services#service-Communication">
                             <div className={styles.arrowContainer}>
-                                <ArrowRightIcon />
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
                             </div>
                         </Link>
                     </div>
