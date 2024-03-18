@@ -15,8 +15,26 @@ export default function HeaderMobile() {
             </button>
             {isOpen && (
                 <div className={style.fullScreenMenu}>
+                     <button onClick={toggleMenu} className={style.headerCloseIcon}>
+                            <XMarkIcon className={style.headerMobileIcon} />
+                    </button>
                     <nav>
                         <ul>
+                            <li onClick={toggleMenu}>
+                                <Link href="/contact" className={style.fullScreenMenuLink}>
+                                    Contact
+                                </Link>
+                            </li>
+                            <li onClick={toggleMenu}>
+                                <Link href="/nos-services" className={style.fullScreenMenuLink}>
+                                    Services
+                                </Link>
+                            </li>
+                            <li onClick={toggleMenu}>
+                                <Link href="/projects" className={style.fullScreenMenuLink}>
+                                    Projets
+                                </Link>
+                            </li>
                             <li onClick={toggleMenu}>
                                 <Link href="/" className={style.fullScreenMenuLink}>
                                    Home
@@ -24,17 +42,7 @@ export default function HeaderMobile() {
                             </li>
                             <li onClick={toggleMenu}>
                                 <Link href="/about" className={style.fullScreenMenuLink}>
-                                    About
-                                </Link>
-                            </li>
-                            <li onClick={toggleMenu}>
-                                <Link href="/projects" className={style.fullScreenMenuLink}>
-                                    Projects
-                                </Link>
-                            </li>
-                            <li onClick={toggleMenu}>
-                                <Link href="/contact" className={style.fullScreenMenuLink}>
-                                    Contact
+                                    A propos
                                 </Link>
                             </li>
                         </ul>
