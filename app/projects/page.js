@@ -14,7 +14,7 @@ export default function Page() {
                             title="Topo"
                         >
                             <p>
-                                Découvrez Topo : notre projet d'identité visuelle innovant pour une marque de surf éco-responsable, alliant design moderne et conscience environnementale pour séduire une clientèle soucieuse de l'impact de ses achats.
+                                Découvrez Topo : notre projet d&apos;identité visuelle innovant pour une marque de surf éco-responsable, alliant design moderne et conscience environnementale pour séduire une clientèle soucieuse de l&apos;impact de ses achats.
                             </p>
                         </Project>
                         <Project
@@ -22,7 +22,7 @@ export default function Page() {
                             title="Dojo"
                         >
                             <p>
-                                Dojo : une identité visuelle captivante pour une plateforme de mise en relation dans l'univers japonais, conçue pour marquer les esprits et établir une présence mémorable dans un marché concurrentiel.
+                                Dojo : une identité visuelle captivante pour une plateforme de mise en relation dans l&apos;univers japonais, conçue pour marquer les esprits et établir une présence mémorable dans un marché concurrentiel.
                             </p>
                         </Project>
                     </div>
