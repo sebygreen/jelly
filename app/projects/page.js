@@ -10,29 +10,19 @@ export default function Page() {
                     <h2>Design</h2>
                     <div className={styles.grid}>
                         <Project
-                            img="/images/couteau_suisse.png"
-                            title="Le Couteau Suisse"
+                            img="/images/topo.jpeg"
+                            title="Topo"
                         >
                             <p>
-                                Le site &apos;Couteau-suisse-des-soins&apos;
-                                reflète notre expertise en SEO et marketing
-                                digital, offrant une refonte complète pour
-                                améliorer l&apos;expérience utilisateur et la
-                                visibilité, attirant ainsi une audience ciblée
-                                en quête de thérapies de bien-être en Suisse.
+                                Découvrez Topo : notre projet d&apos;identité visuelle innovant pour une marque de surf éco-responsable, alliant design moderne et conscience environnementale pour séduire une clientèle soucieuse de l&apos;impact de ses achats.
                             </p>
                         </Project>
                         <Project
-                            img="/images/couteau_suisse.png"
-                            title="Le Couteau Suisse"
+                            img="/images/Dojo.png"
+                            title="Dojo"
                         >
                             <p>
-                                Le site &apos;Couteau-suisse-des-soins&apos;
-                                reflète notre expertise en SEO et marketing
-                                digital, offrant une refonte complète pour
-                                améliorer l&apos;expérience utilisateur et la
-                                visibilité, attirant ainsi une audience ciblée
-                                en quête de thérapies de bien-être en Suisse.
+                                Dojo : une identité visuelle captivante pour une plateforme de mise en relation dans l&apos;univers japonais, conçue pour marquer les esprits et établir une présence mémorable dans un marché concurrentiel.
                             </p>
                         </Project>
                     </div>
@@ -54,29 +44,19 @@ export default function Page() {
                             </p>
                         </Project>
                         <Project
-                            img="/images/couteau_suisse.png"
-                            title="Le Couteau Suisse"
+                            img="/images/NRobert.png"
+                            title="Accupuncture N.Robert"
                         >
                             <p>
-                                Le site &apos;Couteau-suisse-des-soins&apos;
-                                reflète notre expertise en SEO et marketing
-                                digital, offrant une refonte complète pour
-                                améliorer l&apos;expérience utilisateur et la
-                                visibilité, attirant ainsi une audience ciblée
-                                en quête de thérapies de bien-être en Suisse.
+                            Jelly Agency a propulsé le site d&apos;E-commerce de Mme. N.Robert, professionnelle de l&apos;acupuncture, avec un design intuitif et un référencement optimisé, augmentant significativement sa clientèle et sa visibilité en ligne.
                             </p>
                         </Project>
                         <Project
-                            img="/images/couteau_suisse.png"
-                            title="Le Couteau Suisse"
+                            img="/images/metastar.png"
+                            title="MetaStars"
                         >
                             <p>
-                                Le site &apos;Couteau-suisse-des-soins&apos;
-                                reflète notre expertise en SEO et marketing
-                                digital, offrant une refonte complète pour
-                                améliorer l&apos;expérience utilisateur et la
-                                visibilité, attirant ainsi une audience ciblée
-                                en quête de thérapies de bien-être en Suisse.
+                            MetaStars représente notre capacité à créer des produits numériques innovants, avec le développement d&apos;un MVP pour une plateforme d&apos;écoute de musique attirant investisseurs et utilisateurs grâce à une stratégie de conception et de développement orientée utilisateur.
                             </p>
                         </Project>
                     </div>
