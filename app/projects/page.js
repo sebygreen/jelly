@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./page.module.css";
 import Image from "next/image";
 
@@ -12,6 +13,7 @@ export default function Page() {
                         <Project
                             img="/images/topo.jpeg"
                             title="Topo"
+                            link={"/images/topo.pdf"}
                         >
                             <p>
                                 Découvrez Topo : notre projet d&apos;identité visuelle innovant pour une marque de surf éco-responsable, alliant design moderne et conscience environnementale pour séduire une clientèle soucieuse de l&apos;impact de ses achats.
@@ -20,6 +22,7 @@ export default function Page() {
                         <Project
                             img="/images/Dojo.png"
                             title="Dojo"
+                            link={"/images/Dojo.pdf"}
                         >
                             <p>
                                 Dojo : une identité visuelle captivante pour une plateforme de mise en relation dans l&apos;univers japonais, conçue pour marquer les esprits et établir une présence mémorable dans un marché concurrentiel.
@@ -33,6 +36,7 @@ export default function Page() {
                         <Project
                             img="/images/couteau_suisse.png"
                             title="Le Couteau Suisse"
+                            link={"https://couteau-suisse-des-soins.com/"}
                         >
                             <p>
                                 Le site &apos;Couteau-suisse-des-soins&apos;
@@ -44,19 +48,30 @@ export default function Page() {
                             </p>
                         </Project>
                         <Project
-                            img="/images/NRobert.png"
-                            title="Accupuncture N.Robert"
+                            img="/images/tapisbazar_hp.png"
+                            title="Tapis Bazar"
+                            link={"https://tapisbazar.com/"}
                         >
                             <p>
-                            Jelly Agency a propulsé le site d&apos;E-commerce de Mme. N.Robert, professionnelle de l&apos;acupuncture, avec un design intuitif et un référencement optimisé, augmentant significativement sa clientèle et sa visibilité en ligne.
+                            "Tapis Bazar" résulte d&npos;une collaboration entre Jelly Agency et le monde du e-commerce de tapis, mettant en lumière notre travail sur des projets personnalisés. Cette initiative a abouti à la création d&npos;une plateforme d&npos;e-commerce, facilitant la connexion entre les consommateurs et des fournisseurs chinois et indiens réputés. Grâce à notre expérience, nous avons élaboré un site pratique et esthétique, valorisant une sélection variée de tapis. À Jelly Agency, nous sommes contents de participer au développement de "Tapis Bazar", ce qui reflète notre dévouement à l&npos;innovation et à l&npos;amélioration continue dans le domaine du web.
                             </p>
                         </Project>
                         <Project
                             img="/images/metastar.png"
                             title="MetaStars"
+                            link="#"
                         >
                             <p>
                             MetaStars représente notre capacité à créer des produits numériques innovants, avec le développement d&apos;un MVP pour une plateforme d&apos;écoute de musique attirant investisseurs et utilisateurs grâce à une stratégie de conception et de développement orientée utilisateur.
+                            </p>
+                        </Project>
+                        <Project
+                            img="/images/istany.png"
+                            title="Istany"
+                            link="https://istany.ch/"
+                        >
+                            <p>
+                            Pour Istany, photographe de mariage, Jelly Agency a créé un site élégant et fonctionnel, mettant en valeur son portfolio et ses services tout en optimisant son référencement pour capter une clientèle plus large et plus engagée
                             </p>
                         </Project>
                     </div>
@@ -66,8 +81,9 @@ export default function Page() {
     );
 }
 
-function Project({ children, img, title }) {
+function Project({ children, img, title, link }) {
     return (
+        <Link href={link}>
         <article>
             <figure>
                 <Image src={img} alt={title} fill />
@@ -75,5 +91,6 @@ function Project({ children, img, title }) {
             <h2 className={styles.projectTitle}>{title}</h2>
             {children}
         </article>
+        </Link>
     );
 }
