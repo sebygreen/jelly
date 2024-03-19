@@ -1,3 +1,35 @@
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 10px;
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .priceContainer {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; /* Centre le contenu verticalement */
+    }
+    .arrowContainer {
+        justify-content: center;
+        width: 60px; /* Ajustez selon la taille de votre icône */
+        height: 60px; /* Ajustez selon la taille de votre icône */
+    }
+    .price {
+        text-align: center; /* Assure que le prix est centré sous le texte */
+    }
+}
+
+
 .container {
     transform-style: preserve-3d;
     display: flex;
@@ -33,12 +65,15 @@
 }
 
 .cards article .title {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .cards article ul {
     padding-bottom: var(--spacing-small);
     border-bottom: 2px solid var(--translucent-foreground);
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 .cards article ul li:not(:last-child) {
@@ -47,6 +82,7 @@
 
 .cards article .price {
     font-size: 1rem;
+    margin-top: 10px;
     display: block;
     text-align: right;
 }
@@ -107,3 +143,15 @@
     gap: 20px;
     z-index: 1000;
 }
+
+.controlButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--palette-foreground);
+    color: var(--palette-background);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+

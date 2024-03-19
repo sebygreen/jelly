@@ -6,7 +6,7 @@ export default function Page() {
             <div className={styles.wrapper}>
                 <h1>À Propos</h1>
                 <p>
-                    Fondée en juillet 2024, Jelly Agency est
+                    Fondée en juillet 2023, Jelly Agency est
                     l&apos;aboutissement d&apos;une aventure démarrée par trois
                     étudiants passionnés : en art, en design et en informatique.
                     Notre ambition était simple mais audacieuse : combiner nos

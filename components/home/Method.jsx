@@ -16,7 +16,7 @@ export default function Method() {
                                 besoins spécifiques.
                                 <br />
                                 <span>
-                                    Signature et paiement de votre contrat de
+                                    Signature de votre contrat de
                                     vente.
                                 </span>
                             </p>

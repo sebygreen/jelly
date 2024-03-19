@@ -10,6 +10,20 @@
     width: 2.5rem; /* 32px */
 }
 
+.headerCloseIcon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px; /* Place l'icône en haut du conteneur */
+    right: 10px; /* Place l'icône à droite du conteneur */
+    padding: 10px; /*Ajoute un peu d'espace autour de l'icône pour la rendre plus facile à toucher sur un écran tactile
+    cursor: pointer; /* Change le curseur en une main pour indiquer que l'icône est cliquable */
+    background-color: #01624c;
+    border: 0;
+  }
+  
+
 .headerContainer {
     position: fixed;
     display: flex;
@@ -43,7 +57,7 @@
 }
 
 .fullScreenMenu nav ul li {
-    margin: 1rem 0; /* Adjust the margin as needed */
+    margin: 4rem 0; /* Adjust the margin as needed */
 }
 
 .fullScreenMenuLink {

@@ -3,10 +3,14 @@
 import { useState } from "react";
 import styles from "../../style/Slideshow.module.css";
 import Button from "@/components/Button";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { ArrowLeftIcon } from "@heroicons/react/24/solid";
+import { ArrowRightIcon, ArrowLeftIcon, EllipsisHorizontalIcon} from "@heroicons/react/24/solid";
+import Link from "next/link";
+import { useSwipeable } from "react-swipeable"; // Importez useSwipeable
+
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 export default function Slideshow() {
+    const isPhone = useMediaQuery('(max-width: 768px)');
     let [slide, setSlide] = useState(0);
 
     function next() {
@@ -20,53 +24,116 @@ export default function Slideshow() {
         }
     }
 
+    function redirectToNosServices(id) {
+        window.location.href = "/nos-services#service-" + id;
+    }
+
+    // Création des gestionnaires de glissement
+    const handlers = useSwipeable({
+        onSwipedLeft: () => next(),
+        onSwipedRight: () => previous(),
+        delta: 10, // Vous pouvez ajuster cette valeur
+        preventDefaultTouchmoveEvent: true,
+        trackTouch: true,
+        trackMouse: false, // La souris n'est généralement pas utilisée sur le téléphone
+        touchEventOptions: { passive: true } // Cette option peut améliorer la fluidité sur certains navigateurs
+    });
+    
+
     return (
         <main className={styles.container}>
-            <div className={styles.cards}>
-                <Card number={0} slide={slide} title="Identité">
+            <div {...handlers} className={styles.cards}>
+                <Card number={0} slide={slide} title="Web">
+                    <ul>
+                        <li>Création site vitrine</li>
+                        <li>Création site Ecommerce</li>
+                        <li>Refonte de site internet</li>
+                        <li>Système de réservation</li>
+                    </ul>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Site vitrine à partir de <span>1490 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
+                            </div>
+                        </Link>
+                    </div>
+                </Card>
+                <Card number={1} slide={slide} title="Identité">
                     <ul>
                         <li>Création ou refonte charte graphique</li>
                         <li>Création ou refonte de logo</li>
                         <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                        <li>
+                            Création d&apos;illustrations pour tout support
+                        </li>
                     </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Charte graphique à partir de <span>695 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
-                <Card number={1} slide={slide} title="SEO & Publicité">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                <Card number={2} slide={slide} title="SEO & Publicité">
+                    <ul>
+                        <li>Recherche et intégration de mot clés SEO à votre site</li>
+                        <li>Rédaction de contenu optimisé google</li>
+                        <li>Optimisation du google page rank de votre site</li>
+                        <li>Gestion de campagnes Google Ads</li>
                     </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            Analyse de mots clés à partir de <span>190 €</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
-                <Card number={2} slide={slide} title="Réseaux Sociaux">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                <Card number={3} slide={slide} title="Réseaux Sociaux">
+                    <ul>
+                        <li>Community manager</li>
+                        <li>Rapport de statistiques</li>
+                        <li>Création de template de publication</li>
+                        <li>Shooting photos</li>
                     </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
-                </Card>
-                <Card number={3} slide={slide} title="Web">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
-                    </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            <span>Sur devis</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
                 <Card number={4} slide={slide} title="Communication">
-                <ul>
-                        <li>Création ou refonte charte graphique</li>
-                        <li>Création ou refonte de logo</li>
-                        <li>Choix de typographie sur-mesure</li>
-                        <li>Création d&apos;illustrations pour support physique ou numérique</li>
+                    <ul>
+                        <li>Création de supports physiques</li>
+                        <li>Création de supports numériques</li>
+                        <li>Redaction de newsletter et emails marketing</li>
+                        <li>Organisation d&apos;évenements</li>
                     </ul>
-                    <p className={styles.price}>A partir de <span>700 $</span></p>
+                    <div className={styles.priceContainer}>
+                        <p className={styles.price}>
+                            <span>Sur devis</span>
+                        </p>
+                        <Link href="/nos-services#service-Communication">
+                            <div className={styles.arrowContainer}>
+                            {isPhone ? <EllipsisHorizontalIcon /> : <ArrowRightIcon />}
+                            </div>
+                        </Link>
+                    </div>
                 </Card>
             </div>
             <div className={styles.controls}>
@@ -75,12 +142,14 @@ export default function Slideshow() {
                     inverted={true}
                     icon={<ArrowLeftIcon />}
                     action={previous}
+                    className={styles.controlButton}
                 />
                 <Button
                     type="button"
                     inverted={true}
                     icon={<ArrowRightIcon />}
                     action={next}
+                    className={styles.controlButton}
                 />
             </div>
         </main>
@@ -110,7 +179,7 @@ function Card({ number, slide, title, children }) {
     }
     return (
         <article className={status}>
-            <p className={styles.title}>{title}</p>    
+            <p className={styles.title}>{title}</p>
             {children}
         </article>
     );
